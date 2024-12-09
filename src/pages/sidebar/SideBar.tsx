@@ -1,4 +1,5 @@
 import SideBarLink from "./SideBarLink";
+import SideBarUser from "./SideBarUser";
 
 const SideBar = () => {
   const submenuItems1 = [
@@ -13,8 +14,10 @@ const SideBar = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-12 w-60">
-      <div className="p-3"></div>
+    <div className="flex flex-col items-center gap-4 w-60">
+      <div className="w-full flex justify-center items-center ">
+        <SideBarUser />
+      </div>
       <div className="w-full bg-white flex flex-col gap-4 p-5 rounded min-h-96">
         <SideBarLink submenu={submenuItems1} text="آزمـــون آمــاده" />
         <SideBarLink submenu={submenuItems2} text="اجـــرای آزمــون" />

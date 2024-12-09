@@ -43,6 +43,7 @@ export default {
         "custom-conic-gradient": `conic-gradient(from -71.3deg at 49.79% 50.21%, #93ADEE -123.75deg, rgba(129, 221, 251, 0.81) 73.13deg, rgba(156, 216, 229, 0.58) 127.5deg, rgba(161, 212, 228, 0.7) 166.87deg, #93ADEE 236.25deg, rgba(129, 221, 251, 0.81) 433.12deg)`,
         "custom-linear1":
           "linear-gradient(116.12deg, #00BDBD 27.88%, rgba(0, 189, 189, 0) 98.75%)",
+        "custom-gradient": "linear-gradient(to right, #cd96fb, #83f4fa)",
       },
       borderWidth: {
         11: "11px",
