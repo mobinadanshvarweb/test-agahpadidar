@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { setName, setUserName } from "../../redux/slice/user-slice";
 import { useState } from "react";
+import SideBarImg from "./SideBarImg";
 
 const SideBarUser = () => {
   const dispatch = useDispatch();
@@ -11,9 +12,7 @@ const SideBarUser = () => {
   return (
     <div className="w-full flex flex-col gap-2">
       <div className="w-full bg-custom-gradient flex gap-3 justify-center items-center py-2  rounded">
-        <span className="cursor-pointer">
-          <img src="/icon/pro.png" alt="" />
-        </span>
+        <SideBarImg />
         <input
           onFocus={() => setFoucs(true)}
           onBlur={() => setFoucs(false)}

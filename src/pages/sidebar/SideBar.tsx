@@ -14,7 +14,7 @@ const SideBar = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-4 w-60">
+    <div className="flex flex-col items-center gap-4 w-60 relative">
       <div className="w-full flex justify-center items-center ">
         <SideBarUser />
       </div>
