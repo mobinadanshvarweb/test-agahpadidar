@@ -1,5 +1,5 @@
-import SideBar from "./components/SideBar";
 import Flanker from "./pages/flanker/Flanker";
+import SideBar from "./pages/sidebar/SideBar";
 
 const Layout = () => {
   return (

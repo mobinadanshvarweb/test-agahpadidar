@@ -1,7 +1,12 @@
 import React from "react";
 import { FlankerProps } from "../../types/flanker-type";
 
-const FlankerCart: React.FC<FlankerProps> = ({ title, description, owner }) => {
+const FlankerCart: React.FC<FlankerProps> = ({
+  title,
+  description,
+  owner,
+  remain,
+}) => {
   return (
     <div className="w-48 flex flex-col gap-2">
       <div className="w-full flex flex-col p-3 gap-2 rounded-sm bg-[#E9F1F1]  shadow-[0px_4px_21px_6px_#B9C2B72E]">
@@ -12,10 +17,17 @@ const FlankerCart: React.FC<FlankerProps> = ({ title, description, owner }) => {
         <p className="cursor-default text-[#605850] text-center text-sm">
           {description}
         </p>
-        <div className="flex justify-between items-center ">
+        <div className="flex justify-between items-center">
           <span className="flex items-center gap-1 bg-white text-[8px] rounded-sm px-1 cursor-pointer ">
             <span className="text-blue-600">+</span>
             اضافه کردن
+          </span>
+          <span className="flex justify-between items-center cursor-default">
+            <span className="flex justify-start gap-0.5 text-[8px] text-[#605850]">
+              <span className="font-semibold text-black">{remain}</span>
+              اجرا باقی مانده
+            </span>
+            <img src="/icon/Remain.png" alt="" />
           </span>
         </div>
       </div>
