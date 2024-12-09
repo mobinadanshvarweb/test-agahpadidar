@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import { setName, setUserName } from "../../redux/slice/user-slice";
 import { useState } from "react";
 import SideBarImg from "./SideBarImg";
+import { setName, setUserName } from "../../redux/slice/user-slice";
 
 const SideBarUser = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,6 @@ const SideBarUser = () => {
         <SideBarImg />
         <input
           onFocus={() => setFoucs(true)}
-          onBlur={() => setFoucs(false)}
           onChange={(e) => dispatch(setUserName(e.target.value))}
           value={username}
           type="text"
@@ -25,10 +24,13 @@ const SideBarUser = () => {
           placeholder="نام کاربری"
         />
       </div>
-      {focus && username.length > 0 && (
+      {focus && (
         <div className="w-full flex justify-end">
           <button
-            onClick={() => dispatch(setName())}
+            onClick={() => {
+              dispatch(setName());
+              setFoucs(false);
+            }}
             className="bg-[#CECECE] py-1 px-3 rounded flex justify-center items-center"
           >
             تغییر نام

@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import {
   setProfileImage,
   removeProfileImage,
 } from "../../redux/slice/user-slice";
+import { useEffect, useRef, useState } from "react";
 
 const SideBarImg = () => {
   const dispatch = useDispatch();
@@ -46,7 +46,6 @@ const SideBarImg = () => {
     }
   };
 
-  // حذف تصویر
   const handleRemoveImage = () => {
     dispatch(removeProfileImage());
     setOpen(false);
@@ -63,7 +62,7 @@ const SideBarImg = () => {
         <div
           ref={modalRef}
           onClick={(e) => e.stopPropagation()}
-          className="absolute cursor-default w-full p-2 top-16 left-0 bg-white/90 rounded flex  justify-center min-h-72"
+          className="absolute cursor-default w-full p-2 top-16 left-0 bg-white/90 rounded flex justify-center min-h-72"
         >
           <div className="w-full flex flex-wrap justify-center items-center gap-2 h-fit">
             <input
@@ -84,7 +83,7 @@ const SideBarImg = () => {
                 onClick={handleRemoveImage}
                 className="mt-4 w-full px-3 py-2 cursor-pointer rounded bg-red-500 text-white"
               >
-                حذف تصویر
+                حذف کاربر
               </button>
             )}
           </div>
